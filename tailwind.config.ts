@@ -1,5 +1,5 @@
 module.exports = {
-    content: ["./views/**/*.handlebars"],
+    content: [".src/views/**/*.{handlebars,html}"],
     theme: {
         extend: {},
     },

@@ -1,12 +1,12 @@
 import express from "express";
-import dotenv from "dotenv";
 import { engine } from "express-handlebars";
 import path from "path";
 import { fileURLToPath } from "url";
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-dotenv.config();
 
 const app = express();
+app.use(express.static(path.join(__dirname, "../dist")));
 
 app.engine("handlebars", engine());
 app.set("view engine", "handlebars");
